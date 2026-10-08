@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANTES DE JUZGAR — ODS 16</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand">ANTES DE JUZGAR</div>
+  <div class="ods">Agenda 2030 · ODS 16</div>
+</header>
+
+<main>
+<section id="home" class="screen active">
+  <div class="hero">
+    <div>
+      <div class="kicker">Obra digital interactiva · Artes Plásticas BUAP</div>
+      <h1>Antes<br>de<br>juzgar</h1>
+      <p class="lead">Una experiencia sobre paz, justicia, prejuicio y decisiones cotidianas. No hay una respuesta perfecta: cada elección modifica la obra.</p>
+      <button class="btn" onclick="start()">Entrar a la obra</button>
+      <button class="btn alt" onclick="show('about')">Ver concepto</button>
+    </div>
+    <div class="art" aria-label="Composición abstracta">
+      <div class="line"></div><div class="word">JUSTICIA</div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="screen">
+  <div class="kicker">Ficha de obra</div>
+  <h2>El espectador también decide.</h2>
+  <p class="lead">La obra convierte una situación cotidiana de convivencia en una narrativa ramificada. El usuario escucha distintas perspectivas, elige cómo actuar y observa cómo sus decisiones transforman una composición visual.</p>
+  <div class="info-grid">
+    <div class="card"><strong>ODS 16</strong>Promueve sociedades pacíficas e inclusivas, acceso a la justicia e instituciones responsables.</div>
+    <div class="card"><strong>Problemática</strong>Los prejuicios y la indiferencia pueden impedir el diálogo, la inclusión y el acceso equitativo a la justicia.</div>
+    <div class="card"><strong>Idea artística</strong>Convertir cada decisión en una marca visual. El resultado final funciona como un “retrato” de las decisiones del espectador.</div>
+  </div>
+  <button class="btn" onclick="start()">Experimentar</button>
+  <button class="btn alt" onclick="show('home')">Volver</button>
+</section>
+
+<section id="story" class="screen">
+  <div class="kicker">Narrativa interactiva</div>
+  <h2 id="storyTitle">Una tarde en Puebla</h2>
+  <div class="progress"><span id="bar"></span></div>
+  <div class="scenario">
+    <div class="scene" id="scene">
+      <div class="building b1"></div><div class="building b2"></div><div class="building b3"></div>
+      <div class="street"></div>
+      <div class="person"><div class="head"></div><div class="body"></div></div>
+      <div class="person person2"><div class="head"></div><div class="body"></div></div>
+      <div class="bubble" id="bubble">Escuchas una discusión. Una persona acusa a otra de haber tomado algo que no le pertenece.</div>
+    </div>
+    <div>
+      <div class="kicker">Escena <span id="step">1</span> / 6</div>
+      <p id="storyText" class="lead">No conoces a las personas involucradas. Antes de actuar, puedes decidir qué hacer con la información que tienes.</p>
+      <div class="choices" id="choices"></div>
+      <p class="note" id="hint">Tu decisión se registra como parte de la obra.</p>
+    </div>
+  </div>
+</section>
+
+<section id="result" class="screen">
+  <div class="kicker">Resultado de la experiencia</div>
+  <h2 id="resultTitle">Tu recorrido dejó una huella.</h2>
+  <div class="final-art"><canvas id="canvas" width="1100" height="520"></canvas></div>
+  <div class="reflection" id="reflection"></div>
+  <div id="tags"></div>
+  <p class="note" style="text-align:center;margin-top:20px">La imagen se genera a partir de tus decisiones: color, cantidad de formas, ritmo y dirección cambian según el recorrido.</p>
+  <div style="text-align:center;margin-top:20px">
+    <button class="btn" onclick="restart()">Volver a experimentar</button>
+    <button class="btn alt" onclick="show('about')">Ficha de obra</button>
+  </div>
+</section>
+</main>
+
+<footer>
+  <span>Programación para Artista I</span>
+  <span>Arte · Código · Sociedad</span>
+</footer>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
